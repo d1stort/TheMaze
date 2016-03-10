@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,22 +20,48 @@ namespace TheMaze
     /// </summary>
     public partial class Level1 : Window
     {
+        [DllImport("User32.dll")]
+        private static extern bool SetCursorPos(int X, int Y);
+
+        private static void SetCursor(int x, int y)
+        {
+            var xL = (int)App.Current.MainWindow.Left;
+
+            var yT = (int)App.Current.MainWindow.Top;
+
+            SetCursorPos(x + xL, y + yT);
+        }
+
         public Level1()
         {
             InitializeComponent();
         }
-
-        private void MoveMouseToStart()
-        {
-            Point startPoint = new Point();
-            startPoint.Offset(5, 5);
-            //Cursor = PointToScreen(startPoint);
-        }
+        
 
         private void mouseOver_finish(object sender, MouseEventArgs e)
         {
             MessageBox.Show("Congrads!");
             Close();
+        }
+
+        private void mouseEnter_label(object sender, MouseEventArgs e)
+        {
+            Point relativePoint = label01.TransformToAncestor(this).Transform(new Point(0, 0));
+            Point pt = new Point(relativePoint.X - 25,relativePoint.Y - 25);
+            Point windowCenterPoint = this.PointToScreen(pt);
+            Point centerPointRelativeToSCreen = this.PointToScreen(windowCenterPoint);
+
+            SetCursorPos((int)windowCenterPoint.X, (int)windowCenterPoint.Y);
+        }
+
+        private void Level_Loaded(object sender, RoutedEventArgs e)
+        {
+            Point relativePoint = label01.TransformToAncestor(this).Transform(new Point(0, 0));
+            Point pt = new Point(relativePoint.X - 25, relativePoint.Y - 25);
+            Point windowCenterPoint = this.PointToScreen(pt);
+            Point centerPointRelativeToSCreen = this.PointToScreen(windowCenterPoint);
+
+            SetCursorPos((int)windowCenterPoint.X, (int)windowCenterPoint.Y);
         }
     }
 }
