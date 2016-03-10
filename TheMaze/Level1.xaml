@@ -1,0 +1,135 @@
+﻿<Window x:Class="TheMaze.Level1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Level1" Height="450" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Finish" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="11" Grid.Column="10" Grid.ColumnSpan="2" MouseEnter="mouseOver_finish"/>
+
+        <Label Name="labelB1" Grid.Row="0" Grid.RowSpan="12" Width="5" Grid.Column="11" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelB2" Grid.Row="0" Grid.RowSpan="12" Width="5" Grid.Column="0" HorizontalAlignment="Left" Background="#FF51F149" />
+        <Label Name="labelB3" Grid.Row="0" Grid.ColumnSpan="12" Height="5" Grid.Column="0" VerticalAlignment="Top" Background="#FF51F149" />
+
+        <Label Name="labelB4" Grid.Row="11" Grid.ColumnSpan="12" Height="5" Grid.Column="0" VerticalAlignment="Bottom" Background="#FF51F149" />
+
+        <Label Name="label01" Grid.Column="1" Grid.ColumnSpan="3" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label04" Grid.Column="11" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label02" Grid.Column="5" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label03" Grid.Column="7" Grid.ColumnSpan="2" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+
+        <Label Name="label11" Grid.Row="1" Grid.Column="10" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+
+        <Label Name="label21" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label22" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label23" Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="2" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label24" Grid.Row="2" Grid.Column="11" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+
+        <Label Name="label31" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label32" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="5" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+
+        <Label Name="label41" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label42" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label43" Grid.Row="4" Grid.Column="11" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+
+        <Label Name="label51" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label52" Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label53" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label54" Grid.Row="5" Grid.Column="10" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+
+        <Label Name="label61" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label62" Grid.Row="6" Grid.Column="6" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label63" Grid.Row="6" Grid.Column="8" Grid.ColumnSpan="2" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+
+        <Label Name="label71" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="3" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label72" Grid.Row="7" Grid.Column="7" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label73" Grid.Row="7" Grid.Column="9" Grid.ColumnSpan="2" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+
+        <Label Name="label81" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label82" Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="4" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label83" Grid.Row="8" Grid.Column="11" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+
+        <Label Name="label91" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label92" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="2" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label93" Grid.Row="9" Grid.Column="8" Grid.ColumnSpan="3" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+
+        <Label Name="label101" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label102" Grid.Row="10" Grid.Column="3" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label103" Grid.Row="10" Grid.Column="6" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+        <Label Name="label104" Grid.Row="10" Grid.Column="9" Grid.ColumnSpan="1" Height="5" VerticalAlignment="Bottom" Background="#FF51F149"/>
+
+        <Label Name="labelV01" Grid.Row="0" Grid.RowSpan="2" Grid.Column="4" Width="5" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV02" Grid.Row="0" Grid.RowSpan="1" Grid.Column="6" Width="5" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV03" Grid.Row="0" Grid.RowSpan="2" Grid.Column="9" Width="5" HorizontalAlignment="Right" Background="#FF51F149" />
+
+        <Label Name="labelV11" Grid.Row="1" Grid.RowSpan="2" Width="5" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV12" Grid.Row="1" Grid.RowSpan="2" Width="5" Grid.Column="7" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV13" Grid.Row="1" Grid.RowSpan="5" Width="5" Grid.Column="3" HorizontalAlignment="Right" Background="#FF51F149" />
+
+        <Label Name="labelV21" Grid.Row="2" Grid.RowSpan="2" Width="5" Grid.Column="1" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV22" Grid.Row="2" Grid.RowSpan="1" Width="5" Grid.Column="2" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV23" Grid.Row="2" Grid.RowSpan="1" Width="5" Grid.Column="5" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV24" Grid.Row="2" Grid.RowSpan="2" Width="5" Grid.Column="6" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV25" Grid.Row="2" Grid.RowSpan="1" Width="5" Grid.Column="8" HorizontalAlignment="Right" Background="#FF51F149" />
+
+        <Label Name="labelV31" Grid.Row="3" Grid.RowSpan="5" Width="5" Grid.Column="4" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV32" Grid.Row="3" Grid.RowSpan="1" Width="5" Grid.Column="10" HorizontalAlignment="Right" Background="#FF51F149" />
+
+        <Label Name="labelV41" Grid.Row="4" Grid.RowSpan="1" Width="5" Grid.Column="7" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV42" Grid.Row="4" Grid.RowSpan="3" Width="5" Grid.Column="9" HorizontalAlignment="Right" Background="#FF51F149" />
+
+        <Label Name="labelV51" Grid.Row="5" Grid.RowSpan="3" Width="5" Grid.Column="0" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV52" Grid.Row="5" Grid.RowSpan="2" Width="5" Grid.Column="2" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV53" Grid.Row="5" Grid.RowSpan="3" Width="5" Grid.Column="6" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV54" Grid.Row="5" Grid.RowSpan="1" Width="5" Grid.Column="8" HorizontalAlignment="Right" Background="#FF51F149" />
+
+        <Label Name="labelV61" Grid.Row="6" Grid.RowSpan="2" Width="5" Grid.Column="7" HorizontalAlignment="Right" Background="#FF51F149" />
+
+        <Label Name="labelV71" Grid.Row="7" Grid.RowSpan="4" Width="5" Grid.Column="1" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV72" Grid.Row="7" Grid.RowSpan="1" Width="5" Grid.Column="10" HorizontalAlignment="Right" Background="#FF51F149" />
+
+        <Label Name="labelV81" Grid.Row="8" Grid.RowSpan="2" Width="5" Grid.Column="3" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV82" Grid.Row="8" Grid.RowSpan="1" Width="5" Grid.Column="5" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV83" Grid.Row="8" Grid.RowSpan="1" Width="5" Grid.Column="8" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV84" Grid.Row="8" Grid.RowSpan="1" Width="5" Grid.Column="9" HorizontalAlignment="Right" Background="#FF51F149" />
+
+        <Label Name="labelV91" Grid.Row="9" Grid.RowSpan="2" Width="5" Grid.Column="2" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV92" Grid.Row="9" Grid.RowSpan="2" Width="5" Grid.Column="7" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV93" Grid.Row="9" Grid.RowSpan="2" Width="5" Grid.Column="10" HorizontalAlignment="Right" Background="#FF51F149" />
+
+        <Label Name="labelV101" Grid.Row="10" Grid.RowSpan="1" Width="5" Grid.Column="4" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV102" Grid.Row="10" Grid.RowSpan="1" Width="5" Grid.Column="6" HorizontalAlignment="Right" Background="#FF51F149" />
+
+        <Label Name="labelV111" Grid.Row="11" Grid.RowSpan="1" Width="5" Grid.Column="3" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV112" Grid.Row="11" Grid.RowSpan="1" Width="5" Grid.Column="5" HorizontalAlignment="Right" Background="#FF51F149" />
+        <Label Name="labelV113" Grid.Row="11" Grid.RowSpan="1" Width="5" Grid.Column="9" HorizontalAlignment="Right" Background="#FF51F149" />
+
+    </Grid>
+</Window>
