@@ -40,8 +40,9 @@ namespace TheMaze
 
         private void mouseOver_finish(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("Congrads!");
-            Close();
+            panel.Visibility = System.Windows.Visibility.Visible;
+            congradsLabel.Visibility = System.Windows.Visibility.Visible;
+            //Close();
         }
 
         private void mouseEnter_label(object sender, MouseEventArgs e)
@@ -67,13 +68,13 @@ namespace TheMaze
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Up)
-                rect.Margin = new Thickness(rect.Margin.Left, rect.Margin.Top - 10, rect.Margin.Right, rect.Margin.Bottom);
-            else if (e.Key == Key.Down)
-                rect.Margin = new Thickness(rect.Margin.Left, rect.Margin.Top + 10, rect.Margin.Right, rect.Margin.Bottom);
-            else if (e.Key == Key.Left)
-                rect.Margin = new Thickness(rect.Margin.Left - 10, rect.Margin.Top, rect.Margin.Right, rect.Margin.Bottom);
-            else if (e.Key == Key.Right)
-                rect.Margin = new Thickness(rect.Margin.Left + 10, rect.Margin.Top, rect.Margin.Right, rect.Margin.Bottom);
+                nyan.Margin = new Thickness(nyan.Margin.Left, nyan.Margin.Top - 20, nyan.Margin.Right, nyan.Margin.Bottom);
+            else if (e.Key == Key.Down)                                    
+                nyan.Margin = new Thickness(nyan.Margin.Left, nyan.Margin.Top + 20, nyan.Margin.Right, nyan.Margin.Bottom);
+            else if (e.Key == Key.Left)                                         
+                nyan.Margin = new Thickness(nyan.Margin.Left - 20, nyan.Margin.Top, nyan.Margin.Right, nyan.Margin.Bottom);
+            else if (e.Key == Key.Right)                                    
+                nyan.Margin = new Thickness(nyan.Margin.Left + 20, nyan.Margin.Top, nyan.Margin.Right, nyan.Margin.Bottom);
         }
     }
 }

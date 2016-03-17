@@ -35,6 +35,34 @@ namespace TheMaze
             Level1 window = new Level1();
             window.ShowDialog();
         }
+
+        private void statsButton_Click(object sender, RoutedEventArgs e)
+        {
+            scoresTable.Visibility = System.Windows.Visibility.Visible;
+            Player players = new Player();
+            //ShowPlayers(LoadEmployeesFromDB(new Context()));
+
+        }
+
+        static IQueryable<Player> LoadEmployeesFromDB(Context context)
+        {
+            return from player in context.Players
+                   select new Player
+                   {
+                       Name = player.Name,
+                       Score = player.Score,
+                       Rating = player.Rating
+                   };
+        }
+
+        private void ShowPlayers(IEnumerable<Player> players)
+        {
+            Console.WriteLine("|{0,-17}|{1,-10}|{2,-22}|", "Name", "Score", "Rating");
+            foreach (var p in players)
+            {
+                Console.WriteLine("|{0,-17}|{1,-10}|{2,-22}|", p.Name, p.Score, p.Rating);
+            }
+        }
     }
 
 }
