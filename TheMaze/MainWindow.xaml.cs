@@ -24,10 +24,6 @@ namespace TheMaze
         {
             InitializeComponent();
         }
-        public void kek
-        {
-
-        }
 
         private void closeButton_Clicked(object sender, RoutedEventArgs e)
         {

@@ -63,5 +63,17 @@ namespace TheMaze
 
             SetCursorPos((int)windowCenterPoint.X, (int)windowCenterPoint.Y);
         }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Up)
+                rect.Margin = new Thickness(rect.Margin.Left, rect.Margin.Top - 10, rect.Margin.Right, rect.Margin.Bottom);
+            else if (e.Key == Key.Down)
+                rect.Margin = new Thickness(rect.Margin.Left, rect.Margin.Top + 10, rect.Margin.Right, rect.Margin.Bottom);
+            else if (e.Key == Key.Left)
+                rect.Margin = new Thickness(rect.Margin.Left - 10, rect.Margin.Top, rect.Margin.Right, rect.Margin.Bottom);
+            else if (e.Key == Key.Right)
+                rect.Margin = new Thickness(rect.Margin.Left + 10, rect.Margin.Top, rect.Margin.Right, rect.Margin.Bottom);
+        }
     }
 }
