@@ -76,5 +76,11 @@ namespace TheMaze
             else if (e.Key == Key.Right)                                    
                 nyan.Margin = new Thickness(nyan.Margin.Left + 20, nyan.Margin.Top, nyan.Margin.Right, nyan.Margin.Bottom);
         }
+
+        private void labelV01_DragEnter(object sender, DragEventArgs e)
+        {
+            nyan.SetValue(Grid.HorizontalAlignmentProperty, Left);
+            nyan.SetValue(Grid.VerticalAlignmentProperty, Top);
+        }
     }
 }

@@ -63,6 +63,12 @@ namespace TheMaze
                 Console.WriteLine("|{0,-17}|{1,-10}|{2,-22}|", p.Name, p.Score, p.Rating);
             }
         }
+
+        private void goBackButton_Clicked(object sender, RoutedEventArgs e)
+        {
+            scoresTable.Visibility = System.Windows.Visibility.Hidden;
+            goBackButton.Visibility = System.Windows.Visibility.Hidden;
+        }
     }
 
 }
