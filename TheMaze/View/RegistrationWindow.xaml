@@ -11,7 +11,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
             <TextBlock Margin="1">NickName</TextBlock>
-            <TextBox Margin="5" Name="NNameTextBox"></TextBox>
+            <TextBox Margin="5" Name="NNameTextBox" Text="{Binding NickName}"></TextBox>
         </StackPanel>
         <StackPanel Grid.Row="1">
             <TextBlock Margin="2">FirstName</TextBlock>

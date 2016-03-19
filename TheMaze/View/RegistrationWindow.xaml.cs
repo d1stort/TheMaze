@@ -22,6 +22,7 @@ namespace TheMaze
         public RegistrationWindow()
         {
             InitializeComponent();
+            this.DataContext = new Player();
         }
 
         private void CloseRegWindButton_Click(object sender, RoutedEventArgs e)

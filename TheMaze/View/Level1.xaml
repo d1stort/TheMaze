@@ -34,7 +34,7 @@
         </Grid.ColumnDefinitions>
 
 
-        <Image Name="nyan" Source='.\nyan.png' Width="30" Height="25" Margin="7,7,7,7"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="12" Grid.ColumnSpan="12"/>
+        <Image Name="nyan" Source='..\nyan.png' Width="30" Height="25" Margin="7,7,7,7"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="12" Grid.ColumnSpan="12"/>
         
         <Label Content="Finish" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="11" Grid.Column="10" Grid.ColumnSpan="2" MouseEnter="mouseOver_finish"/>
 

@@ -38,9 +38,13 @@ namespace TheMaze
 
         private void statsButton_Click(object sender, RoutedEventArgs e)
         {
-            scoresTable.Visibility = System.Windows.Visibility.Visible;
-            Player players = new Player();
+            //scoresTable.Visibility = System.Windows.Visibility.Visible;
+            //goBackButton.Visibility = System.Windows.Visibility.Visible;
+            //Player players = new Player();
             //ShowPlayers(LoadEmployeesFromDB(new Context()));
+
+            RegistrationWindow win = new RegistrationWindow();
+            
 
         }
 
@@ -51,7 +55,7 @@ namespace TheMaze
                    {
                        NickName = player.NickName,
                        Score = player.Score,
-                       Rating = player.Rating
+                       //Rating = player.Rating
                    };
         }
 
@@ -60,7 +64,7 @@ namespace TheMaze
             Console.WriteLine("|{0,-17}|{1,-10}|{2,-22}|", "Name", "Score", "Rating");
             foreach (var p in players)
             {
-                Console.WriteLine("|{0,-17}|{1,-10}|{2,-22}|", p.NickName, p.Score, p.Rating);
+                //Console.WriteLine("|{0,-17}|{1,-10}|{2,-22}|", p.NickName, p.Score, p.Rating);
             }
         }
 
