@@ -31,9 +31,5 @@ namespace TheMaze
             Close();
         }
 
-        private void RegisterdButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

@@ -16,7 +16,7 @@
             <TextBox Name="NNameTextBox" Text="{Binding Player.NickName}"></TextBox>
         </StackPanel>
         <Button x:Name="CloseRegWindButton" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Grid.RowSpan="1" VerticalAlignment="Center" Width="61" Content="Close" Click="CloseRegWindButton_Click"/>
-        <Button x:Name="RegisterdButton" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="61" Content="Register" Click="RegisterdButton_Click"/>
+        <Button x:Name="RegisterdButton" Command="{Binding RegisterCommand, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="61" Content="Register"/>
 
     </Grid>
 </Window>

@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using TheMaze.Commands;
 
 namespace TheMaze.ViewModels
 {
@@ -14,6 +16,7 @@ namespace TheMaze.ViewModels
         public PlayerViewModel()
         {
             _Player = new Player() { Id = 1, NickName = "AAA" };
+            RegisterCommand = new PlayerRegisterCommand(this);
         }
 
         public Player Player
@@ -24,11 +27,28 @@ namespace TheMaze.ViewModels
             }
         }
 
+        public ICommand RegisterCommand
+        {
+            get;
+            private set;
+        }
+
         public void SaveChanges ()
         {
 
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public bool CanRegister 
+        {
+            get
+            {
+                if (Player == null)
+                    return false;
+                return !String.IsNullOrWhiteSpace(Player.NickName);
+            }
+        
+        }
     }
 }
