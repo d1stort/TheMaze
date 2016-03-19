@@ -17,18 +17,20 @@ namespace TheMaze.Commands
 
         private PlayerViewModel _PlayerViewModel;
 
-
+        //Этот метод даёт понять кнопке registerButton, когда быть активной, а когда нет
         public bool CanExecute(object parameter)
         {
             return _PlayerViewModel.CanRegister;
         }
 
+        //Эта штуковина даёт возможность командам обрабатывать происходящее в окнах впф
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value;  }
             remove { CommandManager.RequerySuggested -= value; }
         }
 
+        //Ну и тут изменённое имя игрока сохраняется (нет)
         public void Execute(object parameter)
         {
             _PlayerViewModel.SaveChanges();
