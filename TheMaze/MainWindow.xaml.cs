@@ -44,8 +44,7 @@ namespace TheMaze
             //ShowPlayers(LoadEmployeesFromDB(new Context()));
 
             RegistrationWindow win = new RegistrationWindow();
-            
-
+            win.Show();
         }
 
         static IQueryable<Player> LoadEmployeesFromDB(Context context)

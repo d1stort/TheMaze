@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TheMaze.ViewModels;
 
 namespace TheMaze
 {
@@ -22,7 +23,7 @@ namespace TheMaze
         public RegistrationWindow()
         {
             InitializeComponent();
-            this.DataContext = new Player();
+            this.DataContext = new PlayerViewModel();
         }
 
         private void CloseRegWindButton_Click(object sender, RoutedEventArgs e)
