@@ -18,7 +18,7 @@ namespace TheMaze
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Player>().Property(p => p.Name).IsRequired();
+            modelBuilder.Entity<Player>().Property(p => p.NickName).IsRequired();
             modelBuilder.Entity<Player>().Property(p => p.Score).IsRequired();
             base.OnModelCreating(modelBuilder);
         }

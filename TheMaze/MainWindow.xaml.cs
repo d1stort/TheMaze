@@ -49,7 +49,7 @@ namespace TheMaze
             return from player in context.Players
                    select new Player
                    {
-                       Name = player.Name,
+                       NickName = player.NickName,
                        Score = player.Score,
                        Rating = player.Rating
                    };
@@ -60,7 +60,7 @@ namespace TheMaze
             Console.WriteLine("|{0,-17}|{1,-10}|{2,-22}|", "Name", "Score", "Rating");
             foreach (var p in players)
             {
-                Console.WriteLine("|{0,-17}|{1,-10}|{2,-22}|", p.Name, p.Score, p.Rating);
+                Console.WriteLine("|{0,-17}|{1,-10}|{2,-22}|", p.NickName, p.Score, p.Rating);
             }
         }
 
