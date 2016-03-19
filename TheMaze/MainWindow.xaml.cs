@@ -38,8 +38,10 @@ namespace TheMaze
 
         private void statsButton_Click(object sender, RoutedEventArgs e)
         {
+            scoresTable.Visibility = System.Windows.Visibility.Visible;
             Player players = new Player();
-            ShowPlayers(LoadEmployeesFromDB(new Context()));
+            //ShowPlayers(LoadEmployeesFromDB(new Context()));
+
         }
 
         static IQueryable<Player> LoadEmployeesFromDB(Context context)

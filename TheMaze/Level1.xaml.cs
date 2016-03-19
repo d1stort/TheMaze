@@ -40,8 +40,9 @@ namespace TheMaze
 
         private void mouseOver_finish(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("Congrads!");
-            Close();
+            panel.Visibility = System.Windows.Visibility.Visible;
+            congradsLabel.Visibility = System.Windows.Visibility.Visible;
+            //Close();
         }
 
         private void mouseEnter_label(object sender, MouseEventArgs e)
@@ -62,6 +63,18 @@ namespace TheMaze
             Point centerPointRelativeToSCreen = this.PointToScreen(windowCenterPoint);
 
             SetCursorPos((int)windowCenterPoint.X, (int)windowCenterPoint.Y);
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Up)
+                nyan.Margin = new Thickness(nyan.Margin.Left, nyan.Margin.Top - 20, nyan.Margin.Right, nyan.Margin.Bottom);
+            else if (e.Key == Key.Down)                                    
+                nyan.Margin = new Thickness(nyan.Margin.Left, nyan.Margin.Top + 20, nyan.Margin.Right, nyan.Margin.Bottom);
+            else if (e.Key == Key.Left)                                         
+                nyan.Margin = new Thickness(nyan.Margin.Left - 20, nyan.Margin.Top, nyan.Margin.Right, nyan.Margin.Bottom);
+            else if (e.Key == Key.Right)                                    
+                nyan.Margin = new Thickness(nyan.Margin.Left + 20, nyan.Margin.Top, nyan.Margin.Right, nyan.Margin.Bottom);
         }
     }
 }
