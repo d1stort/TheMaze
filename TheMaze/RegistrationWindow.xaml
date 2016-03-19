@@ -1,0 +1,30 @@
+﻿<Window x:Class="TheMaze.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RegistrationWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock Margin="1">NickName</TextBlock>
+            <TextBox Margin="5" Name="NNameTextBox"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBlock Margin="2">FirstName</TextBlock>
+            <TextBox Margin="5" Name="FNameTextBox"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock Margin="2">LastName</TextBlock>
+            <TextBox Margin="5" Name="LNameTextBox"></TextBox>
+        </StackPanel>
+        <Grid Grid.Column="0">
+        </Grid>
+        <Button x:Name="CloseRegWindButton" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="61" Margin="55,93.6,177.6,22.4" Content="Close" Height="20" Click="CloseRegWindButton_Click"/>
+        <Button x:Name="RegisterdButton" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="61" Margin="161,93.6,71.6,22.4" Content="Register" Height="20" Click="RegisterdButton_Click"/>
+
+    </Grid>
+</Window>
