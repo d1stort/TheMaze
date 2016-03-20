@@ -19,10 +19,9 @@ namespace TheMaze.View
     /// </summary>
     public partial class LoginWindow : Window
     {
-        public LoginWindow(this)
+        public LoginWindow()
         {
             InitializeComponent();
-
         }
 
         private void PlayButtonLW_Click(object sender, RoutedEventArgs e)
