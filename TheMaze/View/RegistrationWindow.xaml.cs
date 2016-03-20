@@ -23,8 +23,10 @@ namespace TheMaze
         public RegistrationWindow()
         {
             InitializeComponent();
+
             this.DataContext = new PlayerViewModel();
             Level1 l1 = new Level1();
+
             l1.ShowDialog();
             this.Close();
         }
