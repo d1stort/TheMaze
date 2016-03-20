@@ -24,6 +24,9 @@ namespace TheMaze
         {
             InitializeComponent();
             this.DataContext = new PlayerViewModel();
+            Level1 l1 = new Level1();
+            l1.ShowDialog();
+            this.Close();
         }
 
         private void CloseRegWindButton_Click(object sender, RoutedEventArgs e)
