@@ -15,7 +15,7 @@ namespace TheMaze.ViewModels
 
         public PlayerViewModel()
         {
-            _Player = new Player() { Id = 1, NickName = "AAA", Score = 0 };
+            _Player = new Player();
             RegisterCommand = new PlayerRegisterCommand(this);
             UpdateCommand = new PlayerUpdateCommand(this);
         }
@@ -62,9 +62,10 @@ namespace TheMaze.ViewModels
             {
                 if (Player == null)
                     return false;
-                return !String.IsNullOrWhiteSpace(Player.NickName);
+                return String.IsNullOrWhiteSpace(Player.NickName);
             }
         
         }
+
     }
 }

@@ -44,10 +44,10 @@ namespace TheMaze
             //scoresTable.Visibility = System.Windows.Visibility.Visible;
             //goBackButton.Visibility = System.Windows.Visibility.Visible;
             //Player players = new Player();
-            ShowPlayers(LoadEmployeesFromDB(new Context()));
+            ShowPlayers(LoadPlayersFromDB(new Context()));
         }
 
-        static IQueryable<Player> LoadEmployeesFromDB(Context context)
+        static IQueryable<Player> LoadPlayersFromDB(Context context)
         {
             return from player in context.Players
                    select new Player
