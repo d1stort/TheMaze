@@ -9,13 +9,13 @@ using TheMaze.Commands;
 
 namespace TheMaze.ViewModels
 {
-    class PlayerViewModel : INotifyPropertyChanged
+    class PlayerViewModel
     {
         private Player _Player;
 
         public PlayerViewModel()
         {
-            _Player = new Player() { Id = 1, NickName = "AAA" };
+            _Player = new Player() { Id = 1, NickName = "AAA", Score = 0 };
             RegisterCommand = new PlayerRegisterCommand(this);
             UpdateCommand = new PlayerUpdateCommand(this);
         }
@@ -26,6 +26,11 @@ namespace TheMaze.ViewModels
             {
                 return _Player;
             }
+        }
+
+        private void AddScore(int points)
+        {
+            _Player.Score += points;
         }
 
         public ICommand RegisterCommand
@@ -40,12 +45,16 @@ namespace TheMaze.ViewModels
             private set;
         }
 
-        public void SaveChanges ()
+        public void Update()
         {
-
+            AddScore(100);
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public void SaveChanges ()
+        {
+            Player.NickName = "";
+        }
+
 
         public bool CanRegister 
         {

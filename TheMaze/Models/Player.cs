@@ -10,28 +10,31 @@ namespace TheMaze
     public class Player
     {
 
-        //private string _NickName;
+        private string _NickName;
 
         public int Id { get; set; }
 
-        //public String NickName { 
-        //    get { return _NickName; } 
-        //    set 
-        //    {
-        //        _NickName = value;
-        //        OnPropertyChanged("NickName");
-        //    }
-        //}
+        public String NickName
+        {
+            get { return _NickName; }
+            set
+            {
+                _NickName = value;
+                OnPropertyChanged("NickName");
+            }
+        }
 
-        public string NickName { get; set; }
         public int Score { get; set; }
 
-        //public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        //private void OnPropertyChanged(string p)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+
+            if (handler != null)
+                handler(this, new PropertyChangedEventArgs(propertyName));
+        }
 
     }
 }
