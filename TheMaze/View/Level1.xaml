@@ -131,10 +131,10 @@
         <Label Name="labelV112" Grid.Row="11" Grid.RowSpan="1" Width="5" Grid.Column="5" HorizontalAlignment="Right" Background="#FF51F149" MouseEnter="mouseEnter_label"/>
         <Label Name="labelV113" Grid.Row="11" Grid.RowSpan="1" Width="5" Grid.Column="9" HorizontalAlignment="Right" Background="#FF51F149" MouseEnter="mouseEnter_label"/>
         
-        <DataGrid Name="panel"  Grid.ColumnSpan="12" HorizontalAlignment="Left" Height="420" Grid.RowSpan="12" VerticalAlignment="Top" Width="443"/>
-        <Label Name="congradsLabel"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="12" Grid.RowSpan="12" FontSize="40">CONGRADS!</Label>
-        <Button Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="3" Content="Back to menu" FontSize="16" Click="BackTMenu_Click"></Button>
-        <Button Grid.Row="8" Grid.Column="7" Grid.ColumnSpan="3" Content="Continue" FontSize="16"></Button>
+        <DataGrid Name="panel" Visibility="Hidden"  Grid.ColumnSpan="12" HorizontalAlignment="Left" Height="420" Grid.RowSpan="12" VerticalAlignment="Top" Width="443"/>
+        <Label Name="congradsLabel" Visibility="Hidden"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="12" Grid.RowSpan="12" FontSize="40">CONGRADS!</Label>
+        <Button Visibility="Hidden" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="3" Content="Back to menu" FontSize="16" Click="BackTMenu_Click"></Button>
+        <Button Visibility="Hidden" Grid.Row="8" Grid.Column="7" Grid.ColumnSpan="3" Content="Continue" FontSize="16"></Button>
         
 
 
