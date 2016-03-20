@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using TheMaze.Commands;
 
 namespace TheMaze.ViewModels
 {
@@ -15,6 +16,8 @@ namespace TheMaze.ViewModels
         public PlayerViewModel()
         {
             _Player = new Player();
+            RegisterCommand = new PlayerRegisterCommand(this);
+            UpdateCommand = new PlayerUpdateCommand(this);
         }
 
         public Player Player
@@ -22,6 +25,58 @@ namespace TheMaze.ViewModels
             get
             {
                 return _Player;
+            }
+        }
+
+        private void AddScore(int points)
+        {
+            Player.Score += points;
+        }
+
+        public ICommand RegisterCommand
+        {
+            get;
+            private set;
+        }
+
+        public ICommand UpdateCommand
+        {
+            get;
+            private set;
+        }
+
+        public void Update()
+        {
+            AddScore(100);
+        }
+
+        public void SaveChanges ()
+        {
+            int i = 0;
+            Context context = new Context();
+            context.Players.Add(new Player { Id = i, NickName = Player.NickName, Score = 0 });
+            context.SaveChanges();
+        }
+
+
+        public bool CanRegister 
+        {
+            get
+            {
+                if (Player == null)
+                    return false;
+                return !String.IsNullOrWhiteSpace(Player.NickName);
+            }
+        
+        }
+
+        public bool CanUpdate
+        {
+            get
+            {
+                if (Player == null)
+                    return false;
+                return !String.IsNullOrWhiteSpace(Player.NickName);
             }
         }
 

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TheMaze.View;
 
 namespace TheMaze
 {
@@ -32,10 +33,60 @@ namespace TheMaze
 
         private void startButton_Clicked(object sender, RoutedEventArgs e)
         {
-            Level1 lvl = new Level1();
-            lvl.ShowDialog();
+            //Level1 window = new Level1();
+            //window.ShowDialog();
+            AccountWindow acw = new AccountWindow();
+            acw.ShowDialog();
         }
 
+        private void statsButton_Clicked(object sender, RoutedEventArgs e)
+        {
+            scoresTable.Visibility = System.Windows.Visibility.Visible;
+            scoresData.Visibility = System.Windows.Visibility.Visible;
+            goBackButton.Visibility = System.Windows.Visibility.Visible;
+            //Player players = new Player();
+            //ShowPlayers(LoadPlayersFromDB(new Context()));
+        }
+
+        static IQueryable<Player> LoadPlayersFromDB(Context context)
+        {
+            try
+            {
+                return from player in context.Players
+                       select new Player
+                       {
+                           NickName = player.NickName,
+                           Score = player.Score,
+                       };
+            }
+            catch(SystemException)
+            {
+                return null;
+            }
+            
+        }
+
+        private void ShowPlayers(IQueryable<Player> players)
+        {
+            try
+            {
+                foreach (var p in players)
+                {
+                    scoresData.Text = p.NickName;
+                }
+            }
+            catch(SystemException)
+            {
+
+            }
+            
+        }
+
+        private void goBackButton_Clicked(object sender, RoutedEventArgs e)
+        {
+            scoresTable.Visibility = System.Windows.Visibility.Hidden;
+            goBackButton.Visibility = System.Windows.Visibility.Hidden;
+        }
     }
 
 }
