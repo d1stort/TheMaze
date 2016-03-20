@@ -41,8 +41,9 @@ namespace TheMaze
 
         private void statsButton_Clicked(object sender, RoutedEventArgs e)
         {
-            //scoresTable.Visibility = System.Windows.Visibility.Visible;
-            //goBackButton.Visibility = System.Windows.Visibility.Visible;
+            scoresTable.Visibility = System.Windows.Visibility.Visible;
+            scoresData.Visibility = System.Windows.Visibility.Visible;
+            goBackButton.Visibility = System.Windows.Visibility.Visible;
             //Player players = new Player();
             ShowPlayers(LoadPlayersFromDB(new Context()));
         }
@@ -59,10 +60,11 @@ namespace TheMaze
 
         private void ShowPlayers(IEnumerable<Player> players)
         {
-            Console.WriteLine("|{0,-17}|{1,-10}|", "NickName", "Score");
+            //Console.WriteLine("|{0,-17}|{1,-10}|", "NickName", "Score");
             foreach (var p in players)
             {
-                Console.WriteLine("|{0,-17}|{1,-10}|", p.NickName, p.Score);
+                scoresData.Text = p.NickName + " " + p.Score;
+                //Console.WriteLine("|{0,-17}|{1,-10}|", p.NickName, p.Score);
             }
         }
 

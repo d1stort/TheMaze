@@ -13,6 +13,7 @@
         <Button Grid.Row="2" Name="closeButton" Content="Close" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Click="closeButton_Clicked"/>
 
         <DataGrid Visibility="Hidden" Name="scoresTable" HorizontalAlignment="Left" Height="319" Margin="0,0,-3,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="520"/>
+        <TextBox Visibility ="Hidden" Name="scoresData" Margin="20,20,20,20" Grid.RowSpan="2"/>
         <Button Visibility="Hidden" Grid.Row="2" x:Name="goBackButton" Content="Go back" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Click="goBackButton_Clicked"/>
 
     </Grid>

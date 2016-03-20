@@ -30,7 +30,7 @@ namespace TheMaze.ViewModels
 
         private void AddScore(int points)
         {
-            _Player.Score += points;
+            Player.Score += points;
         }
 
         public ICommand RegisterCommand
@@ -52,7 +52,9 @@ namespace TheMaze.ViewModels
 
         public void SaveChanges ()
         {
-            Player.NickName = "aaa";
+            Context context = new Context();
+            context.Players.Add(new Player { Score = 0 , NickName = Player.NickName});
+            context.SaveChanges();
         }
 
 
@@ -62,7 +64,7 @@ namespace TheMaze.ViewModels
             {
                 if (Player == null)
                     return false;
-                return String.IsNullOrWhiteSpace(Player.NickName);
+                return !String.IsNullOrWhiteSpace(Player.NickName);
             }
         
         }
