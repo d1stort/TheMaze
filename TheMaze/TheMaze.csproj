@@ -64,7 +64,10 @@
     </ApplicationDefinition>
     <Compile Include="Commands\PlayerRegisterCommand.cs" />
     <Compile Include="Commands\PlayerUpdateCommand.cs" />
-    <Compile Include="Migrations\DbMigration.cs" />
+    <Compile Include="Migrations\201603201849064_Players.cs" />
+    <Compile Include="Migrations\201603201849064_Players.Designer.cs">
+      <DependentUpon>201603201849064_Players.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\PlayerViewModel.cs" />
     <Compile Include="View\AccountWindow.xaml.cs">
       <DependentUpon>AccountWindow.xaml</DependentUpon>
@@ -116,10 +119,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201603150913436_Players.cs" />
-    <Compile Include="Migrations\201603150913436_Players.Designer.cs">
-      <DependentUpon>201603150913436_Players.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -135,8 +134,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201603150913436_Players.resx">
-      <DependentUpon>201603150913436_Players.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201603201849064_Players.resx">
+      <DependentUpon>201603201849064_Players.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

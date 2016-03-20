@@ -53,7 +53,7 @@ namespace TheMaze.ViewModels
         public void SaveChanges ()
         {
             Context context = new Context();
-            context.Players.Add(new Player { Score = 0 , NickName = Player.NickName});
+            context.Players.Add(new Player { NickName = Player.NickName, Score = 0 });
             context.SaveChanges();
         }
 

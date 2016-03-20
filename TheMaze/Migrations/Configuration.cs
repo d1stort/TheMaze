@@ -18,8 +18,8 @@ namespace TheMaze.Migrations
             Player p2 = new Player { Id = 1, NickName = "d1stort", Score = 10 };
 
 
-                context.Players.AddOrUpdate(p1);
-                context.Players.AddOrUpdate(p2);
+            context.Players.AddOrUpdate(p1);
+            context.Players.AddOrUpdate(p2);
             
 
             //  This method will be called after migrating to the latest version.

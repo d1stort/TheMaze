@@ -13,7 +13,7 @@ namespace TheMaze.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201603150913436_Players"; }
+            get { return "201603201849064_Players"; }
         }
         
         string IMigrationMetadata.Source
