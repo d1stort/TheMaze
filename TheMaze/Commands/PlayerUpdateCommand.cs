@@ -19,7 +19,7 @@ namespace TheMaze.Commands
 
         public bool CanExecute(object parameter)
         {
-            return _ViewModel.CanRegister;
+            return _ViewModel.CanUpdate;
         }
 
         public event EventHandler CanExecuteChanged

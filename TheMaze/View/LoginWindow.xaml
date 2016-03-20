@@ -9,6 +9,6 @@
     <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
         <Label>Nickname</Label>
         <TextBox Width="150" Text="{Binding Player.NickName}" Name="LoginTextBox"></TextBox>
-        <Button Width="45" Command="{Binding UpdateCommand}" Click="PlayButtonLW_Click">Play</Button>
+        <Button Width="45" Command="{Binding PlayerUpdateCommand}" Click="PlayButtonLW_Click">Play</Button>
     </StackPanel>
 </Window>

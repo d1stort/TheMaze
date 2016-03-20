@@ -52,7 +52,7 @@ namespace TheMaze.ViewModels
 
         public void SaveChanges ()
         {
-            Player.NickName = "";
+            Player.NickName = "aaa";
         }
 
 
@@ -65,6 +65,16 @@ namespace TheMaze.ViewModels
                 return String.IsNullOrWhiteSpace(Player.NickName);
             }
         
+        }
+
+        public bool CanUpdate
+        {
+            get
+            {
+                if (Player == null)
+                    return false;
+                return !String.IsNullOrWhiteSpace(Player.NickName);
+            }
         }
 
     }

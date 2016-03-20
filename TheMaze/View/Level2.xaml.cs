@@ -11,17 +11,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TheMaze.ViewModels;
 
 namespace TheMaze
 {
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Level2 : Window
     {
-        public Window1()
+        public Level2()
         {
             InitializeComponent();
+            this.DataContext = new PlayerViewModel();
         }
     }
 }
