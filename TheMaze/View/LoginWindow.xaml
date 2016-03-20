@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheMaze.View"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="56.936" Width="265.771">
+        Title="LoginWindow" Height="76.136" Width="284.171">
     <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
         <Label>Nickname</Label>
-        <TextBox Width="150" Name="LoginTextBox"></TextBox>
-        <Button Width="45" Click="PlayButtonLW_Click">Play</Button>
+        <TextBox Width="150" Text="{Binding Player.NickName}" Name="LoginTextBox"></TextBox>
+        <Button Width="45" Command="{Binding UpdateCommand}" Click="PlayButtonLW_Click">Play</Button>
     </StackPanel>
 </Window>

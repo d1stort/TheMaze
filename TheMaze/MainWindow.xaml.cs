@@ -44,7 +44,7 @@ namespace TheMaze
             //scoresTable.Visibility = System.Windows.Visibility.Visible;
             //goBackButton.Visibility = System.Windows.Visibility.Visible;
             //Player players = new Player();
-            //ShowPlayers(LoadEmployeesFromDB(new Context()));
+            ShowPlayers(LoadEmployeesFromDB(new Context()));
         }
 
         static IQueryable<Player> LoadEmployeesFromDB(Context context)
@@ -59,7 +59,7 @@ namespace TheMaze
 
         private void ShowPlayers(IEnumerable<Player> players)
         {
-            Console.WriteLine("|{0,-17}|{1,-10}|", "Name", "Score");
+            Console.WriteLine("|{0,-17}|{1,-10}|", "NickName", "Score");
             foreach (var p in players)
             {
                 Console.WriteLine("|{0,-17}|{1,-10}|", p.NickName, p.Score);

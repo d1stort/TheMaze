@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheMaze.View"
         mc:Ignorable="d"
-        Title="AccountWindow" Height="160.8" Width="411.6">
-    <Grid>
+        Title="AccountWindow" Height="158.4" Width="411.6">
+    <Grid Margin="0,0,-0.2,0.8">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>

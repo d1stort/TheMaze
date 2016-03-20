@@ -27,7 +27,7 @@ namespace TheMaze.View
         private void YesButtonAc_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow lw = new LoginWindow();
-            lw.ShowDialog();
+            lw.ShowDialog();          
         }
 
         private void NoButtonAc_Click(object sender, RoutedEventArgs e)
