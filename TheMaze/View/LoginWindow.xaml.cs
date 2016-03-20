@@ -19,7 +19,7 @@ namespace TheMaze.View
     /// </summary>
     public partial class LoginWindow : Window
     {
-        public LoginWindow(this)
+        public LoginWindow()
         {
             InitializeComponent();
 
