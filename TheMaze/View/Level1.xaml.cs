@@ -42,7 +42,7 @@ namespace TheMaze
         {
             panel.Visibility = System.Windows.Visibility.Visible;
             congradsLabel.Visibility = System.Windows.Visibility.Visible;
-            //Close();
+
         }
 
         private void mouseEnter_label(object sender, MouseEventArgs e)
@@ -64,6 +64,12 @@ namespace TheMaze
 
             SetCursorPos((int)windowCenterPoint.X, (int)windowCenterPoint.Y);
         }
+
+        private void BackTMenu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
 
     }
 }

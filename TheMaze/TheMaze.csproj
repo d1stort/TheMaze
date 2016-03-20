@@ -63,6 +63,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\PlayerRegisterCommand.cs" />
+    <Compile Include="Commands\PlayerUpdateCommand.cs" />
     <Compile Include="Migrations\DbMigration.cs" />
     <Compile Include="ViewModels\PlayerViewModel.cs" />
     <Compile Include="View\AccountWindow.xaml.cs">

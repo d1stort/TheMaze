@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TheMaze.ViewModels;
 
 namespace TheMaze.View
 {
@@ -22,7 +23,7 @@ namespace TheMaze.View
         public LoginWindow()
         {
             InitializeComponent();
-
+            DataContext = new PlayerViewModel();
         }
 
         private void PlayButtonLW_Click(object sender, RoutedEventArgs e)

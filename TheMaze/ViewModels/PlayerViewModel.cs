@@ -17,6 +17,7 @@ namespace TheMaze.ViewModels
         {
             _Player = new Player() { Id = 1, NickName = "AAA" };
             RegisterCommand = new PlayerRegisterCommand(this);
+            UpdateCommand = new PlayerUpdateCommand(this);
         }
 
         public Player Player
@@ -28,6 +29,12 @@ namespace TheMaze.ViewModels
         }
 
         public ICommand RegisterCommand
+        {
+            get;
+            private set;
+        }
+
+        public ICommand UpdateCommand
         {
             get;
             private set;
