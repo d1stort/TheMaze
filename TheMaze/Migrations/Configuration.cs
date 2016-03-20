@@ -16,8 +16,6 @@ namespace TheMaze.Migrations
         {
             Player p1 = new Player { Id = 0, NickName = "badaevael", Score = 10 };
             Player p2 = new Player { Id = 1, NickName = "d1stort", Score = 10 };
-
-
             context.Players.AddOrUpdate(p1);
             context.Players.AddOrUpdate(p2);
             
