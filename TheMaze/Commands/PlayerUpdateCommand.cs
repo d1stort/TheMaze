@@ -8,7 +8,7 @@ using TheMaze.ViewModels;
 
 namespace TheMaze.Commands
 {
-    class PlayerUpdateCommand : ICommand
+    internal class PlayerUpdateCommand : ICommand
     {
         public PlayerUpdateCommand(PlayerViewModel viewModel)
         {
