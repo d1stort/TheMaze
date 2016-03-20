@@ -62,29 +62,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Commands\PlayerRegisterCommand.cs" />
-    <Compile Include="Commands\PlayerUpdateCommand.cs" />
-    <Compile Include="Migrations\201603201849064_Players.cs" />
-    <Compile Include="Migrations\201603201849064_Players.Designer.cs">
-      <DependentUpon>201603201849064_Players.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\PlayerViewModel.cs" />
-    <Compile Include="View\AccountWindow.xaml.cs">
-      <DependentUpon>AccountWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Level2.xaml.cs">
-      <DependentUpon>Level2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\LoginWindow.xaml.cs">
-      <DependentUpon>LoginWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\RegistrationWindow.xaml.cs">
-      <DependentUpon>RegistrationWindow.xaml</DependentUpon>
-    </Compile>
-    <Page Include="View\AccountWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\Level1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -97,7 +75,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Context.cs" />
     <Compile Include="View\Level1.xaml.cs">
       <DependentUpon>Level1.xaml</DependentUpon>
     </Compile>
@@ -105,21 +82,8 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\Level2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\LoginWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\RegistrationWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -134,9 +98,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201603201849064_Players.resx">
-      <DependentUpon>201603201849064_Players.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

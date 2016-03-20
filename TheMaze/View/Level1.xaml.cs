@@ -45,7 +45,7 @@ namespace TheMaze
             panel.Visibility = System.Windows.Visibility.Visible;
             congradsLabel.Visibility = System.Windows.Visibility.Visible;
             backButton.Visibility = System.Windows.Visibility.Visible;
-            continueButton.Visibility = System.Windows.Visibility.Visible;
+            
         }
 
         private void mouseEnter_label(object sender, MouseEventArgs e)
@@ -70,13 +70,6 @@ namespace TheMaze
 
         private void BackTMenu_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-        }
-
-        private void continueButton_Click(object sender, RoutedEventArgs e)
-        {
-            Level2 lvl = new Level2();
-            lvl.Show();
             this.Close();
         }
 

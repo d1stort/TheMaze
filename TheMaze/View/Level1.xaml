@@ -1,9 +1,9 @@
 ﻿<Window x:Class="TheMaze.Level1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Level1" Height="520" Width="450" Loaded="Level_Loaded">
+        Title="Level1" Height="450" Width="450" Loaded="Level_Loaded" ResizeMode="NoResize">
 
-    <Grid Height="450" VerticalAlignment="Bottom">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
@@ -134,14 +134,7 @@
         <DataGrid Name="panel" Visibility="Hidden"  Grid.ColumnSpan="12" HorizontalAlignment="Center" Height="450" Grid.RowSpan="12" VerticalAlignment="Bottom" Width="443"/>
         <Label Name="congradsLabel" Visibility="Hidden"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="12" Grid.RowSpan="12" FontSize="40">CONGRADS!</Label>
         <Button Name="backButton" Visibility="Hidden" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="3" Content="Back to menu" FontSize="16" Click="BackTMenu_Click"></Button>
-        <Button Name="continueButton" Visibility="Hidden" Grid.Row="8" Grid.Column="7" Grid.ColumnSpan="3" Content="Continue" Command="{Binding PlayerUpdateCommand}" Click="continueButton_Click" FontSize="16"></Button>
-
-        <Label Content="Player:" FontSize="16" Grid.ColumnSpan="6" Height="30" Margin="19.167,-35,0,0" VerticalAlignment="Top" Width="55"/>
-        <Label Content="{Binding Player.NickName}" FontSize="16" Grid.ColumnSpan="3" Grid.Column="5" HorizontalAlignment="Left" Height="30" Margin="-30,-35,0,0" VerticalAlignment="Top"/>
-
-        <Label Content="Score:" FontSize="16" Grid.Column="9" Margin="-85,-35,0,0"/>
-        <Label Content="{Binding Player.Score}" FontSize="16" Grid.Column="8" Grid.ColumnSpan="3" Margin="10.5,-35,0,41"/>
-
+        
 
     </Grid>
 </Window>
