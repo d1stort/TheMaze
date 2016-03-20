@@ -35,6 +35,7 @@ namespace TheMaze.View
         {
             RegistrationWindow win = new RegistrationWindow();
             win.Show();
+            this.Close();
         }
     }
 }
