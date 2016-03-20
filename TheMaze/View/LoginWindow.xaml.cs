@@ -22,6 +22,7 @@ namespace TheMaze.View
         public LoginWindow()
         {
             InitializeComponent();
+
         }
 
         private void PlayButtonLW_Click(object sender, RoutedEventArgs e)
