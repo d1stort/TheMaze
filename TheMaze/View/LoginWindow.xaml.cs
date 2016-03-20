@@ -28,7 +28,8 @@ namespace TheMaze.View
         private void PlayButtonLW_Click(object sender, RoutedEventArgs e)
         {
             Level1 l1 = new Level1();
-            l1.ShowDialog();
+            l1.Show();
+            this.Close();
         }
     }
 }

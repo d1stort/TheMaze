@@ -65,22 +65,5 @@ namespace TheMaze
             SetCursorPos((int)windowCenterPoint.X, (int)windowCenterPoint.Y);
         }
 
-        private void Window_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Up)
-                nyan.Margin = new Thickness(nyan.Margin.Left, nyan.Margin.Top - 20, nyan.Margin.Right, nyan.Margin.Bottom);
-            else if (e.Key == Key.Down)                                    
-                nyan.Margin = new Thickness(nyan.Margin.Left, nyan.Margin.Top + 20, nyan.Margin.Right, nyan.Margin.Bottom);
-            else if (e.Key == Key.Left)                                         
-                nyan.Margin = new Thickness(nyan.Margin.Left - 20, nyan.Margin.Top, nyan.Margin.Right, nyan.Margin.Bottom);
-            else if (e.Key == Key.Right)                                    
-                nyan.Margin = new Thickness(nyan.Margin.Left + 20, nyan.Margin.Top, nyan.Margin.Right, nyan.Margin.Bottom);
-        }
-
-        private void labelV01_DragEnter(object sender, DragEventArgs e)
-        {
-            nyan.SetValue(Grid.HorizontalAlignmentProperty, Left);
-            nyan.SetValue(Grid.VerticalAlignmentProperty, Top);
-        }
     }
 }
