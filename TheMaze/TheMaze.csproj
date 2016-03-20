@@ -70,15 +70,22 @@
     </ApplicationDefinition>
     <Compile Include="Commands\PlayerRegisterCommand.cs" />
     <Compile Include="ViewModels\PlayerViewModel.cs" />
+    <Compile Include="View\AccountWindow.xaml.cs">
+      <DependentUpon>AccountWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Level2.xaml.cs">
       <DependentUpon>Level2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Registration.xaml.cs">
-      <DependentUpon>Registration.xaml</DependentUpon>
+    <Compile Include="View\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\AccountWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Level1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,7 +110,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Registration.xaml">
+    <Page Include="View\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

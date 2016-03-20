@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TheMaze.View;
 
 namespace TheMaze
 {
@@ -32,8 +33,10 @@ namespace TheMaze
 
         private void startButton_Clicked(object sender, RoutedEventArgs e)
         {
-            Level1 window = new Level1();
-            window.ShowDialog();
+            //Level1 window = new Level1();
+            //window.ShowDialog();
+            AccountWindow acw = new AccountWindow();
+            acw.ShowDialog();
         }
 
         private void statsButton_Click(object sender, RoutedEventArgs e)
@@ -42,9 +45,6 @@ namespace TheMaze
             //goBackButton.Visibility = System.Windows.Visibility.Visible;
             //Player players = new Player();
             //ShowPlayers(LoadEmployeesFromDB(new Context()));
-
-            RegistrationWindow win = new RegistrationWindow();
-            win.Show();
         }
 
         static IQueryable<Player> LoadEmployeesFromDB(Context context)
@@ -54,16 +54,15 @@ namespace TheMaze
                    {
                        NickName = player.NickName,
                        Score = player.Score,
-                       //Rating = player.Rating
                    };
         }
 
         private void ShowPlayers(IEnumerable<Player> players)
         {
-            Console.WriteLine("|{0,-17}|{1,-10}|{2,-22}|", "Name", "Score", "Rating");
+            Console.WriteLine("|{0,-17}|{1,-10}|", "Name", "Score");
             foreach (var p in players)
             {
-                //Console.WriteLine("|{0,-17}|{1,-10}|{2,-22}|", p.NickName, p.Score, p.Rating);
+                Console.WriteLine("|{0,-17}|{1,-10}|", p.NickName, p.Score);
             }
         }
 
