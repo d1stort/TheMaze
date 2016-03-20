@@ -30,7 +30,7 @@ namespace TheMaze.Commands
 
         public void Execute(object parameter)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }
