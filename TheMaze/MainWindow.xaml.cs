@@ -39,7 +39,7 @@ namespace TheMaze
             acw.ShowDialog();
         }
 
-        private void statsButton_Click(object sender, RoutedEventArgs e)
+        private void statsButton_Clicked(object sender, RoutedEventArgs e)
         {
             //scoresTable.Visibility = System.Windows.Visibility.Visible;
             //goBackButton.Visibility = System.Windows.Visibility.Visible;
