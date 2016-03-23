@@ -45,7 +45,6 @@ namespace TheMaze
             panel.Visibility = System.Windows.Visibility.Visible;
             congradsLabel.Visibility = System.Windows.Visibility.Visible;
             backButton.Visibility = System.Windows.Visibility.Visible;
-            continueButton.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void mouseEnter_label(object sender, MouseEventArgs e)

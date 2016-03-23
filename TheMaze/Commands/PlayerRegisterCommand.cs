@@ -23,14 +23,14 @@ namespace TheMaze.Commands
             return _ViewModel.CanRegister;
         }
 
-        //Эта штуковина даёт возможность командам обрабатывать происходящее в окнах впф
+        //Даёт возможность командам обрабатывать происходящее в окнах впф
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value;  }
             remove { CommandManager.RequerySuggested -= value; }
         }
 
-        //Ну и тут изменённое имя игрока сохраняется (нет)
+        //Изменённое имя игрока сохраняется
         public void Execute(object parameter)
         {
             _ViewModel.SaveChanges();

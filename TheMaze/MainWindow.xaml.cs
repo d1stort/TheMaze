@@ -33,19 +33,24 @@ namespace TheMaze
 
         private void startButton_Clicked(object sender, RoutedEventArgs e)
         {
-            //Level1 window = new Level1();
-            //window.ShowDialog();
             AccountWindow acw = new AccountWindow();
             acw.ShowDialog();
         }
 
         private void statsButton_Clicked(object sender, RoutedEventArgs e)
         {
-            scoresTable.Visibility = System.Windows.Visibility.Visible;
-            scoresData.Visibility = System.Windows.Visibility.Visible;
-            goBackButton.Visibility = System.Windows.Visibility.Visible;
-            //Player players = new Player();
-            ShowPlayers(LoadPlayersFromDB(new Context()));
+            try
+            {
+                scoresTable.Visibility = System.Windows.Visibility.Visible;
+                scoresData.Visibility = System.Windows.Visibility.Visible;
+                goBackButton.Visibility = System.Windows.Visibility.Visible;
+                //ShowPlayers(LoadPlayersFromDB(new Context()));
+            }
+            catch(SystemException)
+            {
+
+            }
+            
         }
 
         static IQueryable<Player> LoadPlayersFromDB(Context context)
@@ -60,17 +65,16 @@ namespace TheMaze
 
         private void ShowPlayers(IEnumerable<Player> players)
         {
-            //Console.WriteLine("|{0,-17}|{1,-10}|", "NickName", "Score");
             foreach (var p in players)
             {
                 scoresData.Text = p.NickName + " " + p.Score;
-                //Console.WriteLine("|{0,-17}|{1,-10}|", p.NickName, p.Score);
             }
         }
 
         private void goBackButton_Clicked(object sender, RoutedEventArgs e)
         {
             scoresTable.Visibility = System.Windows.Visibility.Hidden;
+            scoresData.Visibility = System.Windows.Visibility.Hidden;
             goBackButton.Visibility = System.Windows.Visibility.Hidden;
         }
     }

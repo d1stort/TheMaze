@@ -5,10 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheMaze.View"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="76.136" Width="284.171">
-    <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-        <Label>Nickname</Label>
-        <TextBox Width="150" Text="{Binding Player.NickName}" Name="LoginTextBox"></TextBox>
-        <Button Width="45" Command="{Binding PlayerUpdateCommand}" Click="PlayButtonLW_Click">Play</Button>
-    </StackPanel>
+        Title="LoginWindow" Height="190" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" >Choose your nickname:</Label>
+        <TextBox Grid.Row="1" Margin="5,5,5,5" Text="{Binding GetRegistered}"/>
+        <Button Grid.Row="2" Margin="90,10,90,10" Content="Play" Click="PlayButtonLW_Click"/>
+    </Grid>
 </Window>

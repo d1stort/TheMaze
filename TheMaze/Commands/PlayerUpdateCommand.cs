@@ -22,6 +22,7 @@ namespace TheMaze.Commands
             return _ViewModel.CanUpdate;
         }
 
+        //Даёт возможность командам обрабатывать происходящее в окнах впф
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }
