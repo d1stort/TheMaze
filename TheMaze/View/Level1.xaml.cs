@@ -72,13 +72,6 @@ namespace TheMaze
             this.Close();
         }
 
-        private void continueButton_Click(object sender, RoutedEventArgs e)
-        {
-            Level2 lvl = new Level2();
-            lvl.Show();
-            this.Close();
-        }
-
 
     }
 }
